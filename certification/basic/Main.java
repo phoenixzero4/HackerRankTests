@@ -2,6 +2,8 @@ package certification.basic;
 
 public class Main {
 
+	// what will the output be?
+	
 	public static void main(String[] args) {
 
 		try {
@@ -14,8 +16,7 @@ public class Main {
 			System.out.println("bad number");
 		}
 		
-		/* comment /* aa */
-		/* a // */
+		// the output is 9.0
 	}
 
 }

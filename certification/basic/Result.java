@@ -1,5 +1,7 @@
 package certification.basic;
 
+import java.util.Scanner;
+
 public class Result {
 
 	static int integers = 0;
@@ -10,7 +12,7 @@ public class Result {
 	public static boolean testInt(String string) {
 		try{
 			int i = Integer.parseInt(string);
-			System.err.println(i + " is an integer");
+			System.err.println(i + ": integer");
 			return true;
 		}catch(NumberFormatException e) {
 			return false;
@@ -21,7 +23,7 @@ public class Result {
 	public static boolean testDouble(String string) {
 		try{
 			double d = Double.parseDouble(string);
-			System.err.println(d + " is a double");
+			System.err.println(d + ": double");
 			return true;
 		}catch(NumberFormatException e) {
 			return false;
@@ -32,12 +34,15 @@ public class Result {
 		String[] array = sentence.split(" ");
 		
 		for(String s : array) {
+			
+		
+			
 			if(testInt(s)) {
 				integers++;
 			}else if(testDouble(s)) {
 				doubles++;
 			}else {
-				System.err.println(s + " is a string");
+				System.err.println(s + ": string");
 				strings++;
 			}
 		}
@@ -48,8 +53,10 @@ public class Result {
 	}
 	public static void main(String[] args) {
 		
-		String string = "give me 10 dollars for 34.50 joker.";
-		typeCounter(string);
+		Scanner input = new Scanner(System.in);
+		System.out.println("Input a string");
+		String sentence = input.nextLine();
+		typeCounter(sentence);
 	}
 
 }
