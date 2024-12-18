@@ -2,7 +2,7 @@ package certification.basic;
 
 public class FizzBuzz {
 
-	public static void fizzbuzz(int n) {
+	public static void fizzBuzz(int n) {
 
 		for (int i = 1; i <= n; i++) {
 			
